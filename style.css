@@ -1,0 +1,42 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 5px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.square.is-off {
+    background-color: black;
+}
+
+/* Style for Restart Button */
+#restartButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restartButton:hover {
+    background-color: #45a049;
+}

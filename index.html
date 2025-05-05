@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out - ITC505</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Lights Out Game</h1>
+    <div id="game-board"></div>
+
+    <!-- Restart Button -->
+    <button id="restartButton" onclick="startNewGame()">Restart Game</button>
+
+    <!-- Addendum Section -->
+    <section id="addendum" style="margin-top: 40px; padding: 20px; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto; background-color: #fff; border: 1px solid #ccc;">
+        <h2>Addendum</h2>
+        <p>I created a Lights Out puzzle using JavaScript, HTML, and CSS. The puzzle begins in a solvable configuration by simulating random legal moves on a blank (all-white) board. Each move toggles a cell and its adjacent neighbors, ensuring that the game state is always solvable.</p>
+        <p>To check for a win condition, the game listens for clicks and evaluates whether all tiles are white after every move. A popup alert ("You win!") is triggered when the player successfully turns off all the lights.</p>
+        <p>The game uses CSS to distinguish between white and black tiles, with the class <code>.is-off</code> controlling the "off" (black) state. I used Comic Sans for a playful style and added a footer to meet the assignment's technical requirements.</p>
+        <p>Challenges I encountered included making sure random board configurations were solvable and correctly toggling edge/corner squares. I resolved these by only using simulated click logic for randomization and by checking grid bounds before toggling neighbors.</p>
+        <p>This project helped reinforce JavaScript DOM manipulation, event listeners, CSS styling, and logic for grid-based game development.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Last updated:
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
